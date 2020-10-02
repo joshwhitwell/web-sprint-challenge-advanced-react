@@ -29,14 +29,32 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+<!--
+Stateful class components are built using the base React class constructor. As with regular Javascript classes, React class components are declared using the class keyword followed by the component name, the extends keyword and React.Component. This then creates a new class object that extends the React component base class. Inside of the class component, the constructor function is called, passing in any props from the parent component as parameters. Then, the super method is called which extends the functionality of the parent class to the child component. The component state is initialized either inside of the constructor function, or outside. Methods that belong to the child component are declared outside of the constructor function and bound automatically to the child class. Finally, the render method is called which is used to return the JSX of the component.
+-->
 
 2. Describe the different phases of the component lifecycle.
+<!--
+The React lifecycle has three phases, which are:
+1) Mounting - The mounting phase comprises the following actions in the lifecycle of component: the constructor function is called, class state is initialized, the render method returns JSX to be displayed by the DOM, and finally the componentDidMount function is called.
+2) Updating - During the updating phase, the component will update and re-render based on changes to props or state. Changes to the component state using setState will automatically trigger re-renders during this phase. The componentDidUpdate method is used to handle any side effects as a result of updates.
+3) Unmounting - Occurs when the component is unmounted, i.e removed from the DOM. Clean ups can be handled using componentWillUnmount.
+-->
 
 3. Demonstrate an understanding of class component lifecycle methods.
+<!--
+See question 2
+-->
 
 4. Define stateful logic.
+<!--
+Stateful logic is any logic that deals with component state. Examples include change handlers that update state on a form, helper functions that format/manipulate state before rendering, etc.
+-->
 
 5. Describe how to test a React component with React Testing Library.
+<!--
+React tests are written inside of a testing suite with the naming convention ComponentName.test/spec.js.  All tests related to a component should be housed within a single testing suite for ease of access and reference. Tests are written using the test() or it() functions, which both take two arguments: a string that defines the test purpose, and a callback function that runs the test. The callback function will be comprised of three parts: an arrangement of the necessary components to be tested, i.e. rendering the element; acting on the targeted elements through queries and event handlers; and asserting on the desired outcome using expect() or other assertions.
+-->
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
